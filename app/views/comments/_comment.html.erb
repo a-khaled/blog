@@ -1,0 +1,11 @@
+<strong><%= comment.user.username %></strong>
+<%= comment.body %>
+
+
+
+<% if can? :update, comment %>
+<%= link_to 'Edit', edit_post_comment_path(comment) %>
+<% end %>
+<% if can? :destroy, comment %>
+<%= link_to "Delete", post_comment_path(comment), method: :delete, data: { confirm: "Are you Sure?"} %>
+<% end %>

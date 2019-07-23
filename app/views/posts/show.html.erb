@@ -1,0 +1,33 @@
+<h1><%= @post.title %></h1>
+
+<br>
+
+<br>
+
+<%= @post.user.username %>
+
+<br>
+
+<%= @post.content %>
+
+<br>
+
+<% if can? :update, @post %>
+<%= link_to "Edit", edit_post_path(@post), class: "button" %>
+<% end %>
+<% if can? :destroy, @post %>
+<%= link_to "Delete", post_path(@post), method: :delete, data: { confirm: "Are you Sure?"} %>
+<% end %>
+
+<div>
+	<h3> <strong><%= @post.comments.count %></strong> Comments</h3>
+	<%= render @post.comments %>
+
+	<h3>Leave a reply</h3>
+
+	<%= render 'comments/form' %>
+
+
+</div>
+
+<%= link_to 'Posts', posts_path %> 
