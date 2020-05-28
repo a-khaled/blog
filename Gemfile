@@ -37,7 +37,7 @@ gem 'bootsnap', '>= 1.1.0', require: false
 
 gem 'devise', '~> 4.6', '>= 4.6.2'
 gem 'kaminari'
-gem 'kaminari-core', '~> 1.1', '>= 1.1.1'
+gem 'kaminari-core', '~> 1.2'
 gem 'cancancan', '~> 3.0', '>= 3.0.1'
 gem 'simple_form'
 
